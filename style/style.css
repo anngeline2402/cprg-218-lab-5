@@ -1,0 +1,133 @@
+/* GLOBAL */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #7ACED3; /* Middle Blue */
+  color: #2F7778; /* Myrtle Green */
+}
+
+/* HEADER */
+header {
+  background-color: #E3CEAA; /* Desert Sand */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+h1 { margin: 0; }
+#toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #2F7778; /* Myrtle Green */
+  cursor: pointer;
+  display: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #2F7778; /* Myrtle Green */
+  font-weight: 600;
+}
+nav a:hover, nav a.active { color: #CE5612; /* Alloy Orange */ }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('/image/skywithflower.jpg');
+  background-size: cover;
+  border-radius: 12px;
+  margin: 1rem;
+  color: black;
+}
+
+/* CONTENT */
+.content {
+  background: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 12px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.card {
+  max-width: 230px;
+  background: #F7AA29; /* Bright Yellow */
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card img { width: 100%; border-radius: 8px; }
+.card:hover { transform: translateY(-5px); }
+
+/* VIDEO */
+.video {
+  background-color: #E3CEAA; /* Desert Sand */
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1rem;
+  text-align: center;
+}
+.video video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+/* FAQ */
+.faq-question {
+  width: 100%;
+  background: #F7AA29; /* Bright Yellow */
+  color: #2F7778; /* Myrtle Green */
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.faq-answer {
+  display: none;
+  background: #E3CEAA; /* Desert Sand */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #CE5612; /* Alloy Orange */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #toggle { display: block; }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #7ACED3; /* Middle Blue */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+  nav.show { display: flex; }
+  nav ul { flex-direction: column; align-items: center; }
+}
